@@ -2,9 +2,12 @@ trigger:
  - main
 
 pool:
-   vmImage: 'ubuntu-latest'
+   name: 'selfhosted'
 
 steps:
  - script: |
-     echo "first pipeline script"
+     sudo apt-get update -y
+     sudo apt install -y ansible
+     ansible --version
+   displayName: 'ansible installed'
 
