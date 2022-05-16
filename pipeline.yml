@@ -21,6 +21,7 @@ steps:
    displayName: "run ansible lint"
 
  - script: |
+       cd ~/.ssh
        sudo chmod 400 ./home/ubuntu/.ssh/ansible_key.pem
        ls -al
 
