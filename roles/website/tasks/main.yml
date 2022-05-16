@@ -12,7 +12,7 @@
     mode: 0755
 
 - name: redirect from index.html to vars.html
-  lineinfile: 
+  lineinfile:
     path: "{{ file_path }}/index.html"
     line: <a href=vars.html>variable page</a>
     insertafter: EOF
