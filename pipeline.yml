@@ -22,7 +22,7 @@ steps:
 
  - script: |
        cd ~/.ssh
-       sudo chmod 700 ~/.ssh/ansible_key.pem
+       sudo chmod 755 ~/.ssh/ansible_key.pem
        ls -al
    displayName: "changing key access permission"
 
