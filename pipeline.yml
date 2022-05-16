@@ -20,3 +20,8 @@ steps:
  - script: ansible-lint
    displayName: "run ansible lint"
 
+ - script: |
+         ANSIBLE_HOST_KEY_CHECKING=false
+         ansible-playbook -u ubuntu -i ~/ansible-basics/host_inventory
+         ./playbooks/apache.install.yml --private-key ~/ansible-basics          
+
