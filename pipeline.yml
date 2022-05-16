@@ -18,5 +18,5 @@ steps:
    displayName: 'Ansible Lint Installed'
 
  - script: ansible-lint
-     displayName: "run ansible lint"
+   displayName: "run ansible lint"
 
