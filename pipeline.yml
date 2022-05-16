@@ -22,8 +22,9 @@ steps:
 
  - script: |
        cd ~/.ssh
-       sudo chmod 400 ./home/ubuntu/.ssh/ansible_key.pem
+       sudo chmod 400 ~/home/ubuntu/.ssh/ansible_key.pem
        ls -al
+   displayName: "changing key access permission"
 
  - script: |
        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/apache-install.yml --private-key '/home/ubuntu/.ssh/ansible_key.pem'
