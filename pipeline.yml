@@ -20,4 +20,4 @@ steps:
  - script: ansible-lint
    displayName: "run ansible lint"
 
- - script: ANSIBLE_HOST_KEY_CHECKING=false ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/apache_install.yml --private-key '/home/ubuntu/.ssh/ansible_key.pem'
+ - script: ANSIBLE_HOST_KEY_CHECKING=false ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/apache-install.yml --private-key '/home/ubuntu/.ssh/ansible_key.pem'
