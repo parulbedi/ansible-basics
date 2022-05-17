@@ -20,7 +20,6 @@ steps:
  - script: ansible-lint
    displayName: "run ansible lint"
 
- steps:
  - task: DownloadSecureFile@1
    name: pemfile
    inputs:
