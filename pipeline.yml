@@ -39,7 +39,7 @@ steps:
  - script: |
        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/apache-install.yml --private-key '~/.ssh/ansi_key.pem'
        ls -al
-   displayName: "Installing Apache"
+   displayName: "Installing Apache2"
 
  - script: |
          ANSIBLE_HOST_KEY_CHECKING=False ANSIBLE_ROLES_PATH=./roles
