@@ -30,11 +30,11 @@ steps:
        #       ls -al
        #   displayName: "saving .pem file"
 
- - script: |
-       cd ~/.ssh
-       sudo chmod 0600 ~/.ssh/ansible_key.pem
-       ls -al
-   displayName: "changing key's  permmisions"
+   # - script: |
+         #       cd ~/.ssh
+       #       sudo chmod 0600 ~/.ssh/ansible_key.pem
+       #       ls -al
+       #   displayName: "changing key's  permmisions"
 
  - script: |
        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/apache-install.yml --private-key '~/.ssh/ansible_key.pem'
