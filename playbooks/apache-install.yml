@@ -30,5 +30,3 @@
     lineinfile:
       path: /var/www/html/index.html
       line: Namaste Ansible!!
-
-
