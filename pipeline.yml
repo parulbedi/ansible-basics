@@ -42,11 +42,11 @@ steps:
    displayName: "Installing Apache2"
 
  - script: |
-         ANSIBLE_HOST_KEY_CHECKING=False ANSIBLE_ROLES_PATH=./roles
+         ANSIBLE_HOST_KEY_CHECKING=False export ANSIBLE_ROLES_PATH=./roles
          ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/website-update.yml --private-key '~/.ssh/ansi_key.pem'
    displayName: "running website update playbook"
 
  - script: |
-         ANSIBLE_HOST_KEY_CHECKING=false ANSIBLE_ROLES_PATH=./roles
+         ANSIBLE_HOST_KEY_CHECKING=false export ANSIBLE_ROLES_PATH=./roles
          ansible-playbook -u ubuntu -i ./host_inventory ./playbooks/website-test.yml --private-key '~/.ssh/ansi_key.pem'
    displayName: "running website test playbook"
