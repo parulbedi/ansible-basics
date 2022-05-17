@@ -3,6 +3,8 @@ trigger:
 
 pool:
    name: default
+   demands:
+   - agent.name -equals controlnode
 
 steps:
  - script: |
