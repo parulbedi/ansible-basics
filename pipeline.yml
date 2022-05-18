@@ -1,8 +1,7 @@
 trigger:
  - main
 
-pool:
-   name: ubuntu-latest
+pool: 'ubuntu-latest'
 
 steps:
  - script: |
